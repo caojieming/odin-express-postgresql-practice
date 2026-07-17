@@ -15,3 +15,4 @@ Default server link: http://localhost:3000/
 - express
 - ejs
 - express-validator
+- (NEW) pg

@@ -14,10 +14,10 @@ app.set("view engine", "ejs");
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 // import routers
-const usersRouter = require("./routes/usersRouter");
+const indexRouter = require("./routes/indexRouter");
 // sets root path
 app.use(express.urlencoded({ extended: true }));
-app.use("/", usersRouter);
+app.use("/", indexRouter);
 
 
 // open web server
