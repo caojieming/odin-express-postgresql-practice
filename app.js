@@ -2,30 +2,22 @@
 try {
   process.loadEnvFile();
 } catch(error) {}
-
-
 // standard express import
 const express = require("express");
 const app = express();
-
 // import the Path CommonJS module from Node
 const path = require("node:path");
-
 // let code know we're using ejs as template engine as well as location of views folder
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
 // setup path to static assets
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
-
 // import routers
-const indexRouter = require("./routes/indexRouter");
-
-
+const usersRouter = require("./routes/usersRouter");
+// sets root path
 app.use(express.urlencoded({ extended: true }));
-
-app.use("/", indexRouter);
+app.use("/", usersRouter);
 
 
 // open web server
