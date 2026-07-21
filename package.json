@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "app": "node --watch app.js",
-    "popdevdb": "node db/populateDevDb.js",
-    "popproddb": "node db/populateProdDb.js"
+    "popdev": "node db/populateDevDb.js",
+    "popprod": "node db/populateProdDb.js"
   },
   "repository": {
     "type": "git",

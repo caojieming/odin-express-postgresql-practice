@@ -4,4 +4,6 @@ const indexRouter = Router();
 
 indexRouter.get("/", dbController.getUsernames);
 
+indexRouter.get("/delete", dbController.deleteAllUsernames);
+
 module.exports = indexRouter;
